@@ -1187,13 +1187,59 @@ def bot(op):
                         cl.sendText(msg.to,"Protect QR Off")
                     else:
                         cl.sendText(msg.to,"done")
+            elif msg.text in ["Guest On","guest on"]:
+              if msg.from_ in admin:
+                if wait["Protectguest"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Guest Stranger On")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["Protectguest"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Guest Stranger On")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["Guest Off","guest off"]:
+              if msg.from_ in admin:
+                if wait["Protectguest"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Guest Stranger Off")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["Protectguest"] = False
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Guest Stranger Off")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["Qr on","qr on"]:
+              if msg.from_ in admin:
+                if wait["ProtectQR"] == True:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Protect QR On")
+                    else:
+                        cl.sendText(msg.to,"done")
+                else:
+                    wait["ProtectQR"] = True
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Protect QR On")
+                    else:
+                        cl.sendText(msg.to,"done")
+            elif msg.text in ["Qr off","qr off"]:
+              if msg.from_ in admin:
+                if wait["ProtectQR"] == False:
+                    if wait["lang"] == "JP":
+                        cl.sendText(msg.to,"Protect QR Off")
+                    else:
+                        cl.sendText(msg.to,"done")
                 else:
                     wait["ProtectQR"] = False
                     if wait["lang"] == "JP":
                         cl.sendText(msg.to,"Protect QR Off")
                     else:
                         cl.sendText(msg.to,"done")
-            elif msg.text in ["Contact On","Contact on","K off"]:
+            elif msg.text in ["Contact On","Contact on","contact on"]:
               if msg.from_ in admin:
                 if wait["contact"] == True:
                     if wait["lang"] == "JP":
